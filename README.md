@@ -8,6 +8,7 @@
 |email|strings|null: false|
 
 ### Association
+- has_many :users_groups
 - has_many :groups, through: :users_groups
 - has_many :massages
 
@@ -28,12 +29,10 @@
 
 ## groupsテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|group_name|string|無し|
-|user_id|references|foreign_key: true|
+####追加のカラムなし
 
 ### Association
+- has_many :users_groups
 - has_many :users, through: :users_groups
 - has_many :massages
 
