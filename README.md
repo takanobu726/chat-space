@@ -10,17 +10,17 @@
 ### Association
 - has_many :users_groups
 - has_many :groups, through: :users_groups
-- has_many :massages
+- has_many :messages
 
 
-## massagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|無し|
+|body|text|null: false|
 |image|string|無し|
-|group_id|integer|無し|
-|user_id|integer|無し|
+|group_id|references|foreign_key: true, null: false|
+|user_id|references|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
@@ -29,12 +29,14 @@
 
 ## groupsテーブル
 
-####追加のカラムなし
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
 
 ### Association
 - has_many :users_groups
 - has_many :users, through: :users_groups
-- has_many :massages
+- has_many :messages
 
 
 ## users_groupsテーブル
