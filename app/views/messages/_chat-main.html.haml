@@ -1,0 +1,23 @@
+.chat-main
+  .main-header
+    .main__current-group
+      .main__current-group-name test-group
+      %ul.main__current-member
+        %li.main__current-member-name Member : スライム ドラキー
+    .main__edit
+      %a{ :href => '',}
+        Edit
+  .messages
+    .message
+      .message-info
+        %p.message-user-name test-user
+        %p.message-date 2019 0726
+      .message-text こんにちは！
+  .form
+    %form.new-message
+      .input-box
+        %input{:placeholder => "type a message", :class => "input-box__text"}
+        %label.image-label
+          %i.fa.fa-image
+          %input{:class => "image-label__input", :type => "file", :name => "message[image]"}
+      %input{:type => "submit", :name => "commit", :value => "Send", :class => "new-message__submit-btn",}
