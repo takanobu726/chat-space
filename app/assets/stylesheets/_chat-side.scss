@@ -1,7 +1,7 @@
 .chat-side {
   width: 300px;
   float: left;
-}
+  }
 
 .side-header {
   align-items: center;
@@ -10,6 +10,7 @@
   background-color: #253141;
   display: flex;
   padding: 0 20px;
+  }
 
 p.sideheader__user-name {
   font-size: 16px;
@@ -23,22 +24,26 @@ ul.user-menu li {
   margin-left: 0.3rem;
   }
 
-a {
+.user-menu__new-group-btn {
+  text-decoration: none;
+  }
+
+.user-menu__edit-user-btn {
   text-decoration: none;
   }
 
 i {
   color: #FFFFFF;
   }
-}
 
 .groups {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px 20px 0;
   overflow: scroll;
+  }
 
-a {
+.groups__select {
   text-decoration: none;
   }
 
@@ -55,4 +60,3 @@ p.group__latest-message {
   color: $white;
   margin-bottom: 40px;
   }
-}
