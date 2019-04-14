@@ -10,22 +10,22 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 1px #eeeeee;
-  }
 
-.main__current-group {
+&__current-group {
   margin-top: 35px;
   }
 
-.main__current-group-name {
+&__current-group-name {
   font-size: 20px;
   color: #333333;
   }
 
-.main__current-member {
+&__current-member {
   margin-top: 15px;
   font-size: 12px;
   color: #999999;
   }
+}
 
 .main__edit {
   height: 40px;
@@ -46,7 +46,7 @@
   padding: 46px 40px;
   padding-bottom: 40px;
   background-color: #fafafa;
-}
+  }
 
 .message {
   padding-bottom: 40px;

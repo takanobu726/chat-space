@@ -10,13 +10,13 @@
   background-color: #253141;
   display: flex;
   padding: 0 20px;
-  }
 
-p.sideheader__user-name {
+&__user-name {
   font-size: 16px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: $white;
   }
+}
 
 ul.user-menu li {
   display: inline;
@@ -33,7 +33,7 @@ ul.user-menu li {
   }
 
 i {
-  color: #FFFFFF;
+  color: $white;
   }
 
 .groups {
@@ -41,11 +41,11 @@ i {
   background-color: #2f3e51;
   padding: 20px 20px 0;
   overflow: scroll;
-  }
 
-.groups__select {
+&__select {
   text-decoration: none;
   }
+}
 
 p.group__group-name {
   font-size: 15px;
