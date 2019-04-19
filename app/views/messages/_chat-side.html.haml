@@ -1,12 +1,13 @@
 .chat-side
   .side-header
-    %p.side-header__user-name スライム
+    %p.side-header__user-name
+      = current_user.name
     %ul.user-menu
       %li.user-menu__new-group
         = link_to "", class: "user-menu__new-group-btn" do
           %i.fa.fa-edit
       %li.user-menu__edit-user
-        = link_to "", class: "user-menu__edit-user-btn" do
+        = link_to edit_user_path(current_user), class: "user-menu__edit-user-btn" do
           %i.fa.fa-cog
 
   .groups
