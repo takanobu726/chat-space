@@ -11,7 +11,10 @@
           %i.fa.fa-cog
 
   .groups
-    = link_to "", class: "groups__select" do
-      .group
-        %p.group__group-name test-group
-        %p.group__latest-message さようなら
+    .group
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group), class: "groups__select" do
+          %p.group__group-name
+            = group.name
+          %p.group__latest-message
+            メッセージはまだありません
