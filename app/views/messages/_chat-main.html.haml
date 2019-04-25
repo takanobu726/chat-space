@@ -8,16 +8,12 @@
       = link_to "", class: "main__edit-group" do
         Edit
   .messages
-    .message
-      .message-info
-        %p.message-user-name test-user
-        %p.message-date 2019 0726
-      .message-text こんにちは！
+    = render @messages
   .form
-    %form.new-message
-      .input-box
-        %input{placeholder: "type a message", class: "input-box__text"}
-        %label.image-label
-          %i.fa.fa-image
-          %input{class: "image-label__input", type: "file", name: "message[image]"}
-      %input{type: "submit", name: "commit", value: "Send", class: "new-message__submit-btn",}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+      %f.image-label
+        = f.label :image, class: "image-label__input" do
+          = fa_icon 'image', class: 'icon'
+          = f.file_field :image, class: 'image-label__file'
+      = f.submit "Send", class: "new-message__submit-btn"
