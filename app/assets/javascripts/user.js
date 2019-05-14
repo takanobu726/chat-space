@@ -59,8 +59,8 @@ $(function(){
   }
 
   $(document).on('click', '.user-search-add', function() {
-    var name = $(this).attr('data-user-name')
-    var user_id = $(this).attr('data-user-id')
+    var name = $(this).data('user-name')
+    var user_id = $(this).data('user-id')
     appendUserToGroup(name, user_id)
     $(this).parent().remove()
   });
