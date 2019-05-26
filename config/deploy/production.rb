@@ -60,3 +60,6 @@
 #     # password: "please use keys"
 #   }
 server '3.112.147.229', user: 'ec2-user', roles: %w{app db web}
+set :ssh_options, {
+ forward_agent: true
+}
